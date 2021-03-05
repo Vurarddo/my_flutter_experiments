@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:image_cropper/image_cropper.dart';
 import 'package:image_picker/image_picker.dart';
 
+import 'package:my_flutter_experiments/utils/localization_extensions.dart';
+
 class ImagePickerScreen extends StatefulWidget {
   final String title;
 
@@ -33,7 +35,7 @@ class _MyHomePageState extends State<ImagePickerScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text(context.localizations.animal(1)),
       ),
       body: Center(
         child: imageFile != null ? Image.file(imageFile) : Container(),
